@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { ExtendedSections, faqList } from "@/components/ExtendedSections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -280,6 +281,15 @@ const toc = [
   { id: "format-duration", n: "9", title: "Format, Duration & Weekly Commitment" },
   { id: "fees", n: "10", title: "Fees & the Real Cost" },
   { id: "flexibility", n: "11", title: "Flexibility Alongside a Job" },
+  { id: "placements", n: "12", title: "Career Support & Placements" },
+  { id: "who-should-choose-logicmojo", n: "13", title: "Who Should Choose LogicMojo" },
+  { id: "who-should-choose-scaler", n: "14", title: "Who Should Choose Scaler" },
+  { id: "pros-and-cons", n: "15", title: "Pros and Cons" },
+  { id: "value-for-money", n: "16", title: "Value for Money" },
+  { id: "verdict", n: "17", title: "The 2026 Verdict" },
+  { id: "faqs", n: "18", title: "Frequently Asked Questions" },
+  { id: "methodology", n: "19", title: "Methodology & Disclosure" },
+  { id: "update-log", n: "20", title: "Editorial Update Log" },
 ];
 
 const navLinks = [
@@ -288,6 +298,9 @@ const navLinks = [
   { id: "curriculum", label: "Curriculum" },
   { id: "fees", label: "Fees" },
   { id: "format-duration", label: "Format" },
+  { id: "placements", label: "Placements" },
+  { id: "verdict", label: "Verdict" },
+  { id: "faqs", label: "FAQs" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -431,6 +444,20 @@ function Article() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqList.map(([q, a]) => ({
+              "@type": "Question",
+              name: q,
+              acceptedAnswer: { "@type": "Answer", text: a },
+            })),
+          }),
+        }}
+      />
 
       {/* ---------------- Sticky header ---------------- */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
@@ -1382,6 +1409,8 @@ function Article() {
               is the one engineered around your constraints; Scaler’s is the one that
               asks your constraints to move.
             </p>
+
+            <ExtendedSections />
 
             {/* CTA */}
             <div className="mt-16 rounded-3xl border border-accent/40 bg-gradient-to-br from-paper to-card p-8 text-center sm:p-12">
