@@ -739,6 +739,23 @@ function Article() {
               <strong>₹65,000-to-₹3.7-lakh decision</strong> that will consume six to
               twelve months of your life.
             </p>
+            <ExperienceNote label="Why we felt qualified to write it">
+              <p>
+                We write this as people who run the cohorts, not as reviewers
+                skimming landing pages. Between us we teach live AI &amp; ML
+                sessions weekly, sit in mock interviews, and rewrite the same
+                three resume mistakes over and over. That is real experience, and
+                it is also a real bias — we sell one of the two programs here.
+              </p>
+              <p>
+                So the deal we are offering you is this: first-hand judgement
+                where we have it, public sources where we do not, a plainly
+                stated conflict of interest, and an explicit section telling you
+                when to pick Scaler over us. If that balance ever slips, the
+                comparison is worthless — including to us.
+              </p>
+            </ExperienceNote>
+
             <p>
               This page attempts something harder: a comparison published by one of the
               two providers that is still worth reading. The only way that works is
