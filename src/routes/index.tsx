@@ -1462,6 +1462,40 @@ function Article() {
               duration and brand they don’t need at a price that funds an emergency
               corpus they do. <strong>Value-for-money score: LogicMojo 9.5, Scaler 6.0.</strong>
             </p>
+            <ExperienceNote label="What we hear on counselling calls">
+              <p>
+                The fee conversation we have most often is not &ldquo;which is
+                cheaper.&rdquo; It is a learner working out, out loud, what happens
+                to a two-year EMI if their team is restructured in month six. We
+                have taken that call enough times to weight financial risk
+                heavily here — and to give the same advice every time, including
+                to people who then chose Scaler: borrow only what you could still
+                service on a lower salary, and get the total repayable amount in
+                writing from whichever provider you pick.
+              </p>
+              <p>
+                Treat the numbers above as a starting point, not gospel. Both
+                providers change pricing; confirm on the{" "}
+                <a
+                  href={LINKS.logicmojoFees}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LogicMojo fees page
+                </a>{" "}
+                and the{" "}
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Scaler program page
+                </a>{" "}
+                before you pay anything.
+              </p>
+            </ExperienceNote>
+
+
 
             {/* 11 — flexibility */}
             <div className="mt-16">
