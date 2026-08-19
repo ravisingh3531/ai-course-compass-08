@@ -549,12 +549,22 @@ function QuizModal({
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href={LINKS.logicmojoCourse}
+            href={isLm ? LINKS.logicmojoCourse : LINKS.scalerCourse}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            {isLm ? "Explore the LogicMojo AI & ML Course" : "Still compare LogicMojo"}
+            {isLm
+              ? "Explore the LogicMojo AI & ML Course"
+              : "Explore the Scaler Data Science & AI-ML Program"}
+          </a>
+          <a
+            href={isLm ? LINKS.scalerCourse : LINKS.logicmojoCourse}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full border border-border px-6 py-3 font-body text-sm font-semibold text-ink transition-colors hover:bg-secondary"
+          >
+            {isLm ? "Compare with Scaler" : "Compare with LogicMojo"}
           </a>
           <button
             onClick={onClose}
