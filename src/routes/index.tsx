@@ -535,7 +535,7 @@ function Article() {
       {/* ---------------- 30-second answer ---------------- */}
       <section className="border-b border-border/70 bg-paper">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
+          <div data-reveal className="grid gap-8 lg:grid-cols-[0.9fr_1.4fr] lg:gap-12">
             <div>
               <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 The 30-second answer
@@ -627,7 +627,7 @@ function Article() {
           </aside>
 
           {/* Main content */}
-          <article className="prose-article max-w-2xl">
+          <article data-reveal className="prose-article max-w-2xl">
             {/* 1 */}
             <SectionHeading n="01" id="why-this-comparison-exists">
               Why This Comparison Exists
