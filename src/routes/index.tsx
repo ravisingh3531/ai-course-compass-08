@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { ExtendedSections, faqList } from "@/components/ExtendedSections";
 import { ResearchRecommendation } from "@/components/ResearchRecommendation";
 import AlumniReviews from "@/components/AlumniReviews";
+import {
+  AuthorByline,
+  AuthorEEAT,
+  ExperienceNote,
+} from "@/components/AuthorEEAT";
+import { AUTHOR } from "@/lib/author";
 import { LINKS } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
