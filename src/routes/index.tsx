@@ -526,7 +526,7 @@ function Article() {
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className="relative font-body text-sm text-muted-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-ink hover:after:w-full"
+                className="relative whitespace-nowrap font-body text-sm text-muted-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-ink hover:after:w-full"
               >
                 {l.label}
               </a>
