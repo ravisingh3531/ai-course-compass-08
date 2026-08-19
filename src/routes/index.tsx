@@ -1505,6 +1505,14 @@ function Article() {
                 >
                   Re-read the comparison
                 </a>
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="inline-flex items-center rounded-full border border-border px-7 py-3 font-body text-sm font-semibold text-ink transition-colors hover:bg-secondary"
+                >
+                  Check Scaler’s official page
+                </a>
               </div>
               <p className="mt-6 font-body text-xs text-muted-foreground">
                 All fees indicative as of August 2026. Nothing here is a placement or salary
