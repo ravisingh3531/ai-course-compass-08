@@ -480,6 +480,34 @@ function Article() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline:
+              "LogicMojo vs Scaler: Which AI Course Is Better in 2026?",
+            description:
+              "A first-hand, evidence-labelled comparison of the LogicMojo and Scaler AI & ML programs, written by mentors who teach live AI cohorts.",
+            dateModified: "2026-08-01",
+            author: {
+              "@type": "Organization",
+              name: AUTHOR.name,
+              url: AUTHOR.profileUrl,
+              description: AUTHOR.role,
+            },
+            reviewedBy: { "@type": "Organization", name: AUTHOR.name },
+            publisher: {
+              "@type": "Organization",
+              name: "LogicMojo",
+              url: "https://logicmojo.com/",
+            },
+            citation: [LINKS.logicmojoCourse, LINKS.scalerCourse],
+          }),
+        }}
+      />
+
 
       {/* ---------------- Sticky header ---------------- */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
