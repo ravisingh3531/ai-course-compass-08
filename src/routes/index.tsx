@@ -311,18 +311,18 @@ const toc = [
 ];
 
 const navLinks = [
-  { id: "author-eeat", label: "Who wrote this" },
+  { id: "author-eeat", label: "Author" },
   { id: "the-full-comparison-table", label: "Comparison" },
   { id: "scoring-system", label: "Scoring" },
   { id: "curriculum", label: "Curriculum" },
   { id: "fees", label: "Fees" },
   { id: "placements", label: "Placements" },
-  { id: "research-backed-recommendation", label: "Recommendation" },
+  { id: "research-backed-recommendation", label: "Verdict picks" },
   { id: "course-quiz", label: "Quiz" },
-  { id: "alumni-reviews", label: "Alumni reviews" },
-  { id: "verdict", label: "Verdict" },
+  { id: "alumni-reviews", label: "Alumni" },
   { id: "faqs", label: "FAQs" },
 ];
+
 
 
 /* ------------------------------------------------------------------ */
