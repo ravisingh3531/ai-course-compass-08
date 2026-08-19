@@ -462,7 +462,16 @@ function useScrollProgress() {
 function Article() {
   const active = useActiveSection(toc.map((t) => t.id));
   const progress = useScrollProgress();
+  const [menuOpen, setMenuOpen] = useState(false);
   useScrollReveal();
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
