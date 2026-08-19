@@ -290,6 +290,13 @@ const toc = [
   { id: "faqs", n: "18", title: "Frequently Asked Questions" },
   { id: "methodology", n: "19", title: "Methodology & Disclosure" },
   { id: "update-log", n: "20", title: "Editorial Update Log" },
+  { id: "research-backed-recommendation", n: "21", title: "My Research-Backed Recommendations" },
+  { id: "genai-topics", n: "22", title: "2026 GenAI Syllabus Checklist" },
+  { id: "beginner-scorecard", n: "23", title: "Beginner Scorecard" },
+  { id: "beginner-audiences", n: "24", title: "Which Course Is Better For You" },
+  { id: "placement-truth", n: "25", title: "Assistance vs Guarantee" },
+  { id: "course-quiz", n: "26", title: "Find Your Fit — Quiz" },
+  { id: "how-i-researched", n: "27", title: "How I Researched This" },
 ];
 
 const navLinks = [
@@ -297,11 +304,13 @@ const navLinks = [
   { id: "scoring-system", label: "Scoring" },
   { id: "curriculum", label: "Curriculum" },
   { id: "fees", label: "Fees" },
-  { id: "format-duration", label: "Format" },
   { id: "placements", label: "Placements" },
+  { id: "research-backed-recommendation", label: "Recommendation" },
+  { id: "course-quiz", label: "Quiz" },
   { id: "verdict", label: "Verdict" },
   { id: "faqs", label: "FAQs" },
 ];
+
 
 /* ------------------------------------------------------------------ */
 /*  Small presentational helpers                                       */
