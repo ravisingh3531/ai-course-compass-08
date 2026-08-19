@@ -10,6 +10,7 @@ import {
 } from "@/components/AuthorEEAT";
 import { AUTHOR } from "@/lib/author";
 import { LINKS } from "@/lib/links";
+import { ScrollableTable } from "@/components/ScrollableTable";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -1012,7 +1013,7 @@ function Article() {
               comparison in which it did would not be worth your trust. All figures are
               indicative as of August 2026.
             </p>
-            <div className="mt-6 -mx-1 overflow-x-auto">
+            <ScrollableTable>
               <table className="w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b-2 border-ink/80">
@@ -1065,7 +1066,7 @@ function Article() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollableTable>
             <p className="mt-5 font-body text-sm italic text-muted-foreground">
               How to read this table: count the rows that matter <em>to you</em>, not the
               total. If brand and network dominate your decision, Scaler wins several rows
@@ -1471,7 +1472,7 @@ function Article() {
               to a learner who cannot attend it. This is where the two programs diverge
               most sharply.
             </p>
-            <div className="mt-6 -mx-1 overflow-x-auto">
+            <ScrollableTable>
               <table className="w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b-2 border-ink/80">
@@ -1499,7 +1500,7 @@ function Article() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollableTable>
             <h3 className="mt-8 font-heading text-2xl text-ink">
               Why Duration Is a Cost, Not Just a Feature
             </h3>
@@ -1550,7 +1551,7 @@ function Article() {
               August 2026; confirm current pricing, GST treatment, discounts, and EMI terms
               directly with each provider before enrolling.</strong>
             </p>
-            <div className="mt-6 -mx-1 overflow-x-auto">
+            <ScrollableTable>
               <table className="w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b-2 border-ink/80">
@@ -1577,7 +1578,7 @@ function Article() {
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollableTable>
             <h3 className="mt-8 font-heading text-2xl text-ink">Three Observations the Table Forces</h3>
             <ul className="mt-2">
               <li>

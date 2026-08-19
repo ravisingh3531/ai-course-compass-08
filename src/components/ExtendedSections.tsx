@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LINKS } from "@/lib/links";
+import { ScrollableTable } from "@/components/ScrollableTable";
 
 /* ------------------------------------------------------------------ */
 /*  Shared bits                                                        */
@@ -475,8 +476,8 @@ export function ExtendedSections() {
       </div>
 
       <SubHeading>The Career Support Machinery, Side by Side</SubHeading>
-      <div className="mt-6 -mx-1 overflow-x-auto">
-        <table className="w-full border-collapse text-left">
+      <ScrollableTable>
+              <table className="w-full border-collapse text-left">
           <thead>
             <tr className="border-b-2 border-ink/80">
               <th className="p-3 font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -509,7 +510,7 @@ export function ExtendedSections() {
             ))}
           </tbody>
         </table>
-      </div>
+            </ScrollableTable>
 
       <div className="note-card mt-6">
         <p className="font-body text-xs font-semibold uppercase tracking-[0.16em] text-accent">
@@ -760,8 +761,8 @@ export function ExtendedSections() {
           planning assumptions, not measured rates.
         </p>
       </div>
-      <div className="mt-6 -mx-1 overflow-x-auto">
-        <table className="w-full border-collapse text-left">
+      <ScrollableTable>
+              <table className="w-full border-collapse text-left">
           <thead>
             <tr className="border-b-2 border-ink/80">
               <th className="p-3 font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -788,7 +789,7 @@ export function ExtendedSections() {
             ))}
           </tbody>
         </table>
-      </div>
+            </ScrollableTable>
       <div className="mt-6 grid gap-3 sm:grid-cols-3">
         {[
           { k: "~40%", v: "of Scaler’s per-hour cost" },
@@ -968,8 +969,8 @@ export function ExtendedSections() {
           Editorial Update Log
         </SectionHeading>
       </div>
-      <div className="mt-6 -mx-1 overflow-x-auto">
-        <table className="w-full border-collapse text-left">
+      <ScrollableTable>
+              <table className="w-full border-collapse text-left">
           <thead>
             <tr className="border-b-2 border-ink/80">
               <th className="p-3 font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -1006,7 +1007,7 @@ export function ExtendedSections() {
             </tr>
           </tbody>
         </table>
-      </div>
+            </ScrollableTable>
       <p className="mt-4 font-body text-sm italic text-muted-foreground">
         Spotted an outdated figure or a claim that doesn’t hold up? Write to us —
         corrections make this page more useful, and we log them publicly.
