@@ -105,7 +105,7 @@ function StoryCard({
   const borderClass = tone === "lm" ? "border-accent/40" : "border-primary/30";
   const badgeClass =
     tone === "lm"
-      ? "border-accent/40 bg-accent/10 text-accent-foreground"
+      ? "border-accent/50 bg-accent/10 text-accent"
       : "border-primary/30 bg-primary/10 text-primary";
 
   return (
