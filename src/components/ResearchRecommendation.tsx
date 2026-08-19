@@ -873,8 +873,8 @@ export function ResearchRecommendation() {
           </div>
         </div>
 
-        <div className="mt-6 overflow-x-auto">
-          <table className="w-full min-w-[720px] border-collapse text-left">
+        <ScrollableTable>
+              <table className="w-full min-w-[720px] border-collapse text-left">
             <thead>
               <tr className="border-b border-border">
                 <th className="py-3 pr-4 font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -906,7 +906,7 @@ export function ResearchRecommendation() {
               ))}
             </tbody>
           </table>
-        </div>
+            </ScrollableTable>
       </section>
 
       {/* 24 — Who should pick what */}
