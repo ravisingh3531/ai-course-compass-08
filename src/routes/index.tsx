@@ -433,13 +433,13 @@ function Article() {
     <div className="min-h-screen bg-background text-foreground">
 
       {/* ---------------- Sticky header ---------------- */}
-      <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <a
             href="#top"
             className="flex items-baseline gap-2 font-heading text-xl text-ink"
           >
-            <span className="text-accent">Logic</span>Mojo
+            <span className="gradient-text font-semibold">Logic</span>Mojo
             <span className="hidden font-body text-[0.7rem] font-medium uppercase tracking-[0.18em] text-muted-foreground sm:inline">
               · Editorial
             </span>
@@ -449,7 +449,7 @@ function Article() {
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className="font-body text-sm text-muted-foreground transition-colors hover:text-ink"
+                className="relative font-body text-sm text-muted-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-ink hover:after:w-full"
               >
                 {l.label}
               </a>
@@ -459,27 +459,45 @@ function Article() {
             href="https://www.logicmojo.com/ai-ml-course"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
           >
             Explore the Course
           </a>
         </div>
+        <div
+          className="h-0.5 origin-left bg-[image:var(--gradient-brand)] transition-[width] duration-150"
+          style={{ width: `${progress}%` }}
+          aria-hidden
+        />
       </header>
 
       {/* ---------------- Hero ---------------- */}
-      <section id="top" className="relative overflow-hidden border-b border-border/70">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+      <section
+        id="top"
+        className="gradient-hero relative overflow-hidden border-b border-border/70"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.5]"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 20%, var(--color-accent) 0, transparent 40%), radial-gradient(circle at 85% 30%, var(--color-primary) 0, transparent 45%)",
+              "linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+            maskImage:
+              "radial-gradient(70% 60% at 50% 20%, black, transparent 75%)",
+            WebkitMaskImage:
+              "radial-gradient(70% 60% at 50% 20%, black, transparent 75%)",
           }}
         />
-        <div className="relative mx-auto max-w-3xl px-4 pb-14 pt-16 text-center sm:px-6 sm:pb-20 sm:pt-24">
-          <p className="font-body text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-            LogicMojo · Editorial
+        <div
+          data-reveal
+          className="relative mx-auto max-w-3xl px-4 pb-16 pt-16 text-center sm:px-6 sm:pb-24 sm:pt-24"
+        >
+          <p className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-card/70 px-3 py-1 font-body text-xs font-semibold uppercase tracking-[0.22em] text-accent backdrop-blur">
+            <span className="inline-block size-1.5 animate-pulse rounded-full bg-accent" />
+            2026 Comparison
           </p>
-          <h1 className="mt-5 font-heading text-[2.6rem] leading-[1.05] text-ink sm:text-6xl">
-            LogicMojo vs Scaler:
+          <h1 className="mt-6 font-heading text-[2.6rem] leading-[1.05] text-ink sm:text-6xl">
+            LogicMojo vs <span className="gradient-text">Scaler</span>:
             <br className="hidden sm:block" /> Which AI Course Is Better in 2026?
           </h1>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-sm text-muted-foreground">
@@ -489,7 +507,21 @@ function Article() {
             <span aria-hidden>·</span>
             <span>Published by LogicMojo</span>
           </div>
-          <p className="mx-auto mt-7 max-w-2xl font-body text-base leading-relaxed text-muted-foreground">
+          <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-3">
+            {[
+              { k: "₹65,000", v: "LogicMojo fee" },
+              { k: "₹2.5–3.7L", v: "Scaler band" },
+              { k: "8.7 / 7.5", v: "Overall score" },
+            ].map((s) => (
+              <div key={s.v} className="surface-card px-3 py-4">
+                <p className="font-heading text-xl text-ink sm:text-2xl">{s.k}</p>
+                <p className="mt-1 font-body text-[0.7rem] uppercase tracking-[0.12em] text-muted-foreground">
+                  {s.v}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl font-body text-base leading-relaxed text-muted-foreground">
             <strong className="font-semibold text-ink">Disclosure:</strong>{" "}
             This comparison is published by LogicMojo, which offers one of the two
             programs reviewed here. Every claim is labelled, the scoring rubric is
@@ -498,6 +530,7 @@ function Article() {
           </p>
         </div>
       </section>
+
 
       {/* ---------------- 30-second answer ---------------- */}
       <section className="border-b border-border/70 bg-paper">
