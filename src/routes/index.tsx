@@ -776,8 +776,25 @@ function Article() {
             </h3>
             <p className="mt-4">
               Scaler (by InterviewBit) is one of India’s largest tech-upskilling
-              companies, best known for Scaler Academy and, relevant here, its{" "}
-              <strong>Data Science / AI & Machine Learning program</strong>. Scaler’s
+              companies, best known for{" "}
+              <a
+                href={LINKS.scalerAcademy}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="font-medium text-primary underline underline-offset-4 hover:text-accent"
+              >
+                Scaler Academy
+              </a>{" "}
+              and, relevant here, its{" "}
+              <a
+                href={LINKS.scalerCourse}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="font-semibold text-primary underline underline-offset-4 hover:text-accent"
+              >
+                Data Science / AI &amp; Machine Learning program
+              </a>
+              . Scaler’s
               2026 AI/ML offering is a serious, current product: a roughly{" "}
               <strong>12-month</strong> curriculum updated for the modern stack — RAG,
               multi-agent systems, and LLMOps — delivered through live classes,
