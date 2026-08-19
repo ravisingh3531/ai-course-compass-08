@@ -470,7 +470,7 @@ function Article() {
               </h2>
             </div>
             <div className="space-y-4">
-              <div className="rounded-2xl border border-accent/40 bg-card p-5">
+              <div className="surface-card border-accent/40 p-5">
                 <p className="font-body text-sm text-muted-foreground">
                   Best for most learners
                 </p>
@@ -486,7 +486,7 @@ function Article() {
                   <strong className="font-semibold text-accent">8.7 / 10</strong>.
                 </p>
               </div>
-              <div className="rounded-2xl border border-primary/30 bg-card p-5">
+              <div className="surface-card border-primary/30 p-5">
                 <p className="font-body text-sm text-muted-foreground">
                   Best for a 12-month immersive runway
                 </p>
@@ -677,7 +677,7 @@ function Article() {
               some version of: <em>the course is good if you stay consistent; if you
               attend passively, it will feel overpriced.</em>
             </p>
-            <div className="mt-6 rounded-2xl border border-border bg-paper p-6">
+            <div className="note-card mt-6">
               <p className="font-body text-sm font-semibold uppercase tracking-[0.16em] text-accent">
                 The one-sentence version of each philosophy
               </p>
@@ -783,7 +783,7 @@ function Article() {
               {scores.map((s) => (
                 <div
                   key={s.criterion}
-                  className="rounded-xl border border-border bg-card p-4"
+                  className="surface-card p-4"
                 >
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <p className="font-body text-sm font-semibold text-ink">
@@ -822,14 +822,14 @@ function Article() {
               ))}
             </div>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border-2 border-accent/50 bg-accent/10 p-5 text-center">
+              <div className="surface-card border-accent/50 bg-accent/10 p-5 text-center">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   LogicMojo weighted total
                 </p>
                 <p className="mt-1 font-heading text-5xl text-accent">8.7</p>
                 <p className="font-body text-xs text-muted-foreground">out of 10</p>
               </div>
-              <div className="rounded-2xl border-2 border-primary/40 bg-primary/10 p-5 text-center">
+              <div className="surface-card border-primary/40 bg-primary/10 p-5 text-center">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                   Scaler weighted total
                 </p>
@@ -842,7 +842,7 @@ function Article() {
               9.5×0.20 = 8.73. Scaler = 8.0×0.20 + 8.0×0.15 + 8.5×0.15 + 6.5×0.15 + 8.5×0.15 +
               6.0×0.20 = 7.53.
             </p>
-            <div className="mt-6 rounded-2xl border border-border bg-paper p-6">
+            <div className="note-card mt-6">
               <p className="font-body text-sm font-semibold uppercase tracking-[0.16em] text-accent">
                 What the scores do and don’t mean
               </p>
@@ -898,7 +898,7 @@ function Article() {
               weight of current-stack content is high: a learner reaches LLM and RAG
               territory within the first half of the course rather than in month nine.
             </p>
-            <div className="mt-5 rounded-xl border-l-2 border-accent bg-paper/60 p-4">
+            <div className="note-card mt-5 p-5">
               <p className="font-body text-xs font-semibold uppercase tracking-wide text-accent">
                 Honest limitation
               </p>
@@ -919,7 +919,7 @@ function Article() {
               the advanced AI content. Learners are placed into beginner, intermediate, or
               advanced tracks via a 30-minute entrance MCQ.
             </p>
-            <div className="mt-5 rounded-xl border-l-2 border-primary/50 bg-paper/60 p-4">
+            <div className="note-card mt-5 p-5">
               <p className="font-body text-xs font-semibold uppercase tracking-wide text-primary">
                 Honest strength
               </p>
@@ -930,7 +930,7 @@ function Article() {
                 risk of being overwhelmed early.
               </p>
             </div>
-            <div className="mt-3 rounded-xl border-l-2 border-primary/50 bg-paper/60 p-4">
+            <div className="note-card mt-3 p-5">
               <p className="font-body text-xs font-semibold uppercase tracking-wide text-primary">
                 Honest limitation
               </p>
@@ -1018,7 +1018,7 @@ function Article() {
               counting — it is about what a hiring manager can inspect at the end.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-accent/40 bg-card p-5">
+              <div className="surface-card border-accent/40 p-5">
                 <p className="font-heading text-xl text-ink">LogicMojo</p>
                 <p className="mt-2 font-body text-sm leading-relaxed text-foreground">
                   Built around <strong>15+ hands-on projects</strong>: classical ML builds,
@@ -1028,7 +1028,7 @@ function Article() {
                   deployment. Every project is designed to be defensible in an interview.
                 </p>
               </div>
-              <div className="rounded-2xl border border-primary/30 bg-card p-5">
+              <div className="surface-card border-primary/30 p-5">
                 <p className="font-heading text-xl text-ink">Scaler</p>
                 <p className="mt-2 font-body text-sm leading-relaxed text-foreground">
                   Projects <strong>module by module, tied to real business cases</strong> —
@@ -1065,7 +1065,7 @@ function Article() {
               our entire comparison.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-accent/40 bg-card p-5">
+              <div className="surface-card border-accent/40 p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-accent">
                   LogicMojo
                 </p>
@@ -1077,7 +1077,7 @@ function Article() {
                   guidance. The distance between learner and instructor is short.
                 </p>
               </div>
-              <div className="rounded-2xl border border-primary/30 bg-card p-5">
+              <div className="surface-card border-primary/30 p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-primary">
                   Scaler
                 </p>
@@ -1269,7 +1269,7 @@ function Article() {
               have.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-accent/40 bg-card p-5">
+              <div className="surface-card border-accent/40 p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-accent">
                   LogicMojo’s flexibility profile
                 </p>
@@ -1282,7 +1282,7 @@ function Article() {
                   effortless.
                 </p>
               </div>
-              <div className="rounded-2xl border border-primary/30 bg-card p-5">
+              <div className="surface-card border-primary/30 p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-primary">
                   Scaler’s flexibility profile
                 </p>
