@@ -612,6 +612,9 @@ function Article() {
       </section>
 
 
+      {/* ---------------- 00 · E-E-A-T author block ---------------- */}
+      <AuthorEEAT />
+
       {/* ---------------- 30-second answer ---------------- */}
       <section className="border-b border-border/70 bg-paper">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
