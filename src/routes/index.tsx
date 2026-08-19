@@ -598,6 +598,14 @@ function Article() {
                   fee — with a weekend-friendly schedule. Weighted score:{" "}
                   <strong className="font-semibold text-accent">8.7 / 10</strong>.
                 </p>
+                <a
+                  href={LINKS.logicmojoCourse}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex font-body text-sm font-semibold text-accent underline underline-offset-4 hover:text-primary"
+                >
+                  View the official LogicMojo AI &amp; ML course page ↗
+                </a>
               </div>
               <div className="surface-card border-primary/30 p-5">
                 <p className="font-body text-sm text-muted-foreground">
@@ -613,6 +621,14 @@ function Article() {
                   Weighted score:{" "}
                   <strong className="font-semibold text-primary">7.5 / 10</strong>.
                 </p>
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="mt-3 inline-flex font-body text-sm font-semibold text-primary underline underline-offset-4 hover:text-accent"
+                >
+                  View the official Scaler DS/AI &amp; ML program page ↗
+                </a>
               </div>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
                 The deciding variables: your budget, your weekly time, and whether you
