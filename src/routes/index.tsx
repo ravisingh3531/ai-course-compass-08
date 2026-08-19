@@ -57,21 +57,21 @@ const comparisonRows: Row[] = [
   {
     dimension: "Program length",
     logicmojo: "~7 months",
-    scaler: "~12 months (shorter ~7-month \u201cAdvanced\u201d track for those who test in)",
+    scaler: "~12 months (shorter ~7-month “Advanced” track for those who test in)",
     edge: "LogicMojo for time-to-capability; Scaler for runway depth",
     edgeSide: "lm",
   },
   {
     dimension: "Listed fee (indicative)",
-    logicmojo: "\u20b965,000, GST inclusive",
+    logicmojo: "₹65,000, GST inclusive",
     scaler:
-      "~\u20b92.5L\u2013\u20b93.7L band (aggregators list ~\u20b93.69L; scholarships up to ~\u20b925K reported)",
-    edge: "LogicMojo \u2014 roughly one-fifth the cost",
+      "~₹2.5L–₹3.7L band (aggregators list ~₹3.69L; scholarships up to ~₹25K reported)",
+    edge: "LogicMojo — roughly one-fifth the cost",
     edgeSide: "lm",
   },
   {
     dimension: "EMI availability",
-    logicmojo: "Yes (provider cites EMIs around \u20b95,160/month)",
+    logicmojo: "Yes (provider cites EMIs around ₹5,160/month)",
     scaler: "Yes (EMI and financing partners; terms vary)",
     edge: "LogicMojo (smaller principal = lower EMI burden and risk)",
     edgeSide: "lm",
@@ -79,14 +79,14 @@ const comparisonRows: Row[] = [
   {
     dimension: "2026 AI stack coverage (GenAI, RAG, agents)",
     logicmojo:
-      "Yes \u2014 LLMs, RAG, agentic AI are core curriculum, not add-on modules",
-    scaler: "Yes \u2014 program updated for RAG, multi-agent systems, LLMOps",
+      "Yes — LLMs, RAG, agentic AI are core curriculum, not add-on modules",
+    scaler: "Yes — program updated for RAG, multi-agent systems, LLMOps",
     edge: "Tie on coverage; LogicMojo edges on proportion of course devoted to it",
     edgeSide: "lm",
   },
   {
     dimension: "Classical ML & deep learning foundations",
-    logicmojo: "Covered end-to-end (Python \u2192 ML \u2192 DL)",
+    logicmojo: "Covered end-to-end (Python → ML → DL)",
     scaler:
       "Covered end-to-end with a longer foundations runway (Excel, SQL, statistics onward)",
     edge: "Scaler for absolute-beginner runway length",
@@ -95,7 +95,7 @@ const comparisonRows: Row[] = [
   {
     dimension: "DSA & problem-solving",
     logicmojo:
-      "Strong heritage \u2014 dedicated DSA + System Design track; interview-calibrated problem solving in AI course",
+      "Strong heritage — dedicated DSA + System Design track; interview-calibrated problem solving in AI course",
     scaler:
       "Deep problem-solving culture; in-house coding platform and judges; exhaustive DSA in Academy track",
     edge: "Scaler for exhaustive depth; LogicMojo for interview-efficient coverage",
@@ -105,20 +105,20 @@ const comparisonRows: Row[] = [
     dimension: "Projects",
     logicmojo: "15+ hands-on projects incl. GenAI/RAG/agent builds; portfolio-oriented capstones",
     scaler: "Module-by-module projects tied to business cases; interview-ready builds",
-    edge: "Broadly tie \u2014 different shapes (see Projects section)",
+    edge: "Broadly tie — different shapes (see Projects section)",
     edgeSide: "tie",
   },
   {
     dimension: "Mentorship model",
     logicmojo: "1-on-1 mentorship + direct instructor access; live doubt resolution",
     scaler: "Structured 1:1 mentor sessions at scale; structured career check-ins",
-    edge: "Tie \u2014 genuinely strong on both sides, different models",
+    edge: "Tie — genuinely strong on both sides, different models",
     edgeSide: "tie",
   },
   {
     dimension: "Live classes",
     logicmojo:
-      "Live cohort classes, weekend-friendly scheduling; ~8\u201310 hrs/week class load reported by learners",
+      "Live cohort classes, weekend-friendly scheduling; ~8–10 hrs/week class load reported by learners",
     scaler: "Live classes, multiple sessions weekly; schedule varies by batch",
     edge: "LogicMojo for working-professional scheduling",
     edgeSide: "lm",
@@ -134,7 +134,7 @@ const comparisonRows: Row[] = [
     dimension: "Entrance barrier",
     logicmojo: "Open enrolment; counselling call to assess fit",
     scaler: "30-minute MCQ entrance test determines level/track",
-    edge: "Depends \u2014 Scaler\u2019s test aids cohort levelling; LogicMojo\u2019s open door is faster",
+    edge: "Depends — Scaler’s test aids cohort levelling; LogicMojo’s open door is faster",
     edgeSide: "dep",
   },
   {
@@ -147,14 +147,14 @@ const comparisonRows: Row[] = [
   {
     dimension: "Alumni network",
     logicmojo: "Growing; concentrated in product companies (provider-reported)",
-    scaler: "1,00,000+ alumni community (provider-reported) \u2014 one of India\u2019s largest",
+    scaler: "1,00,000+ alumni community (provider-reported) — one of India’s largest",
     edge: "Scaler, clearly",
     edgeSide: "sc",
   },
   {
     dimension: "Brand recognition with recruiters",
     logicmojo: "Moderate and growing; judged on skills/portfolio",
-    scaler: "High \u2014 among the strongest EdTech brands in Indian tech hiring",
+    scaler: "High — among the strongest EdTech brands in Indian tech hiring",
     edge: "Scaler, clearly",
     edgeSide: "sc",
   },
@@ -169,7 +169,7 @@ const comparisonRows: Row[] = [
     dimension: "Placement claims",
     logicmojo: "Provider-reported alumni outcomes; no independent audit",
     scaler: "Provider-reported partner counts and outcomes; no independent audit",
-    edge: "Tie \u2014 neither is independently audited; treat both accordingly",
+    edge: "Tie — neither is independently audited; treat both accordingly",
     edgeSide: "tie",
   },
   {
@@ -181,23 +181,23 @@ const comparisonRows: Row[] = [
   },
   {
     dimension: "Weekly time needed",
-    logicmojo: "~10\u201315 hrs (classes + assignments)",
-    scaler: "~15\u201320 hrs typical for full value across 12 months",
+    logicmojo: "~10–15 hrs (classes + assignments)",
+    scaler: "~15–20 hrs typical for full value across 12 months",
     edge: "LogicMojo for job-compatibility",
     edgeSide: "lm",
   },
   {
     dimension: "Financial risk if life interrupts",
-    logicmojo: "Lower \u2014 smaller fee, shorter commitment",
-    scaler: "Higher \u2014 larger fee, longer commitment, EMI continues regardless",
+    logicmojo: "Lower — smaller fee, shorter commitment",
+    scaler: "Higher — larger fee, longer commitment, EMI continues regardless",
     edge: "LogicMojo",
     edgeSide: "lm",
   },
   {
     dimension: "Best for",
     logicmojo: "Working professionals, career switchers staying employed, value-focused learners, freshers on a budget",
-    scaler: "Learners with 12+ months and \u20b93L+ budget wanting maximum structure, brand, and network",
-    edge: "\u2014",
+    scaler: "Learners with 12+ months and ₹3L+ budget wanting maximum structure, brand, and network",
+    edge: "—",
     edgeSide: "dep",
   },
 ];
@@ -227,7 +227,7 @@ const scores: Score[] = [
     lm: 8.5,
     sc: 8.0,
     reason:
-      "LogicMojo\u2019s 15+ projects skew toward deployable GenAI builds; Scaler\u2019s module-tied projects are strong but sit inside a longer, broader arc.",
+      "LogicMojo’s 15+ projects skew toward deployable GenAI builds; Scaler’s module-tied projects are strong but sit inside a longer, broader arc.",
     winner: "lm",
   },
   {
@@ -236,7 +236,7 @@ const scores: Score[] = [
     lm: 8.5,
     sc: 8.5,
     reason:
-      "Genuine tie: LogicMojo\u2019s instructor-proximate 1:1 model vs Scaler\u2019s structured mentor network at scale \u2014 different mechanisms, comparable outcomes.",
+      "Genuine tie: LogicMojo’s instructor-proximate 1:1 model vs Scaler’s structured mentor network at scale — different mechanisms, comparable outcomes.",
     winner: "tie",
   },
   {
@@ -254,7 +254,7 @@ const scores: Score[] = [
     lm: 7.5,
     sc: 8.5,
     reason:
-      "Scaler\u2019s placement machinery, alumni scale, and brand recall are a real advantage; LogicMojo competes on per-learner attention and referrals but at smaller scale.",
+      "Scaler’s placement machinery, alumni scale, and brand recall are a real advantage; LogicMojo competes on per-learner attention and referrals but at smaller scale.",
     winner: "sc",
   },
   {
@@ -263,7 +263,7 @@ const scores: Score[] = [
     lm: 9.5,
     sc: 6.0,
     reason:
-      "\u20b965,000 for the current stack in 7 months vs a \u20b92.5L\u2013\u20b93.7L, 12-month commitment; the capability-per-rupee gap is the largest in the comparison.",
+      "₹65,000 for the current stack in 7 months vs a ₹2.5L–₹3.7L, 12-month commitment; the capability-per-rupee gap is the largest in the comparison.",
     winner: "lm",
   },
 ];
@@ -451,8 +451,8 @@ function Article() {
             <strong className="font-semibold text-ink">Disclosure:</strong>{" "}
             This comparison is published by LogicMojo, which offers one of the two
             programs reviewed here. Every claim is labelled, the scoring rubric is
-            published in full, and Scaler\u2019s genuine advantages are stated as plainly
-            as LogicMojo\u2019s. Read the methodology before you trust any single number.
+            published in full, and Scaler’s genuine advantages are stated as plainly
+            as LogicMojo’s. Read the methodology before you trust any single number.
           </p>
         </div>
       </section>
@@ -481,7 +481,7 @@ function Article() {
                   A 7-month, live, mentor-led program covering the full 2026 AI stack
                   (ML, deep learning, GenAI, RAG, AI agents) at a listed fee of{" "}
                   <strong className="font-semibold text-ink">₹65,000</strong> (GST
-                  inclusive, EMI available) — roughly one-fifth of Scaler\u2019s listed
+                  inclusive, EMI available) — roughly one-fifth of Scaler’s listed
                   fee — with a weekend-friendly schedule. Weighted score:{" "}
                   <strong className="font-semibold text-accent">8.7 / 10</strong>.
                 </p>
@@ -572,8 +572,8 @@ function Article() {
               pricing as of August 2026 and marked indicative. Every outcome claim —
               placements, salaries, hiring partners — is labelled either{" "}
               <em>verified</em> (independently checkable) or{" "}
-              <em>provider-reported</em> (the platform\u2019s own claim), and Scaler\u2019s
-              provider-reported claims and LogicMojo\u2019s receive identical treatment.
+              <em>provider-reported</em> (the platform’s own claim), and Scaler’s
+              provider-reported claims and LogicMojo’s receive identical treatment.
               The scoring rubric is published with its weights, so if you care more about
               brand recognition than value for money, you can re-weight it and reach a
               different conclusion — and for some readers, you honestly should.
@@ -618,7 +618,7 @@ function Article() {
               LogicMojo is a Bengaluru-based EdTech provider that built its reputation on
               interview preparation — its long-running Data Structures, Algorithms and
               System Design (HLD + LLD) program for working software engineers targeting
-              product-company roles. That heritage matters in two ways. First, LogicMojo\u2019s
+              product-company roles. That heritage matters in two ways. First, LogicMojo’s
               teaching DNA is <em>interview-outcome-oriented</em>: courses are built
               backwards from what hiring panels actually ask, not forwards from academic
               syllabi. Second, the platform grew up serving working professionals with
@@ -626,13 +626,13 @@ function Article() {
               could not attend a weekday 11 a.m. lecture.
             </p>
             <p>
-              LogicMojo\u2019s <strong>AI & ML Course</strong> applies that model to the
+              LogicMojo’s <strong>AI & ML Course</strong> applies that model to the
               2026 AI stack: a roughly <strong>7-month, live, cohort-based program</strong>{" "}
               covering Python, machine learning, deep learning, and — critically for 2026 —
               generative AI, LLMs, RAG systems, and agentic AI, delivered through live
               weekend-friendly classes with recorded access, 1-on-1 mentorship, 15+
               hands-on projects, and placement assistance. The publicly listed fee is{" "}
-              <strong>₹65,000 (GST inclusive)</strong> with EMI options — LogicMojo\u2019s own
+              <strong>₹65,000 (GST inclusive)</strong> with EMI options — LogicMojo’s own
               fee-comparison page cites monthly EMIs around ₹5,160.
             </p>
             <p>
@@ -646,9 +646,9 @@ function Article() {
               Scaler: The Immersive, Ecosystem-Scale Transformation Model
             </h3>
             <p className="mt-4">
-              Scaler (by InterviewBit) is one of India\u2019s largest tech-upskilling
+              Scaler (by InterviewBit) is one of India’s largest tech-upskilling
               companies, best known for Scaler Academy and, relevant here, its{" "}
-              <strong>Data Science / AI & Machine Learning program</strong>. Scaler\u2019s
+              <strong>Data Science / AI & Machine Learning program</strong>. Scaler’s
               2026 AI/ML offering is a serious, current product: a roughly{" "}
               <strong>12-month</strong> curriculum updated for the modern stack — RAG,
               multi-agent systems, and LLMOps — delivered through live classes,
@@ -661,14 +661,14 @@ function Article() {
               these as indicative.
             </p>
             <p>
-              Scaler\u2019s philosophy is <strong>immersion at scale</strong>: give a
+              Scaler’s philosophy is <strong>immersion at scale</strong>: give a
               learner a long runway, heavy structure, a large peer cohort, dedicated
               mentors, and a placement ecosystem, and transform their career trajectory
               over roughly a year. When a learner has the time, the money, and the
               stamina, this model genuinely works.
             </p>
             <p>
-              The trade-offs are the mirror image of LogicMojo\u2019s. The fee is roughly{" "}
+              The trade-offs are the mirror image of LogicMojo’s. The fee is roughly{" "}
               <strong>four to five times higher</strong> at listed prices. The duration is
               roughly <strong>70% longer</strong>. The weekly commitment that makes a
               12-month immersive program worthwhile is difficult to sustain alongside a
@@ -685,7 +685,7 @@ function Article() {
                 <li>
                   <strong>LogicMojo:</strong>{" "}
                   <em>Teach a working professional the current, hireable AI stack in 7
-                  months, live, at a price that doesn\u2019t require a loan.</em>
+                  months, live, at a price that doesn’t require a loan.</em>
                 </li>
                 <li>
                   <strong>Scaler:</strong>{" "}
@@ -776,7 +776,7 @@ function Article() {
             </div>
             <p className="mt-6">
               Six criteria, their weights, why each weight is what it is, and both
-              platforms\u2019 scores with the reasoning stated. If your priorities differ,
+              platforms’ scores with the reasoning stated. If your priorities differ,
               re-weight and recompute — the arithmetic is deliberately simple.
             </p>
             <div className="mt-6 space-y-3">
@@ -844,7 +844,7 @@ function Article() {
             </p>
             <div className="mt-6 rounded-2xl border border-border bg-paper p-6">
               <p className="font-body text-sm font-semibold uppercase tracking-[0.16em] text-accent">
-                What the scores do and don\u2019t mean
+                What the scores do and don’t mean
               </p>
               <ul className="mt-4">
                 <li>
@@ -880,9 +880,9 @@ function Article() {
               the same: <strong>how much of the course is the stack employers are hiring
               for right now — LLMs, RAG, agents, deployment — and how much is runway?</strong>
             </p>
-            <h3 className="mt-8 font-heading text-2xl text-ink">LogicMojo\u2019s Curriculum</h3>
+            <h3 className="mt-8 font-heading text-2xl text-ink">LogicMojo’s Curriculum</h3>
             <p className="mt-4">
-              LogicMojo\u2019s ~7-month program runs as a single continuous arc from
+              LogicMojo’s ~7-month program runs as a single continuous arc from
               programming foundations to production-grade AI systems: Python for AI/ML;
               statistics and data handling; core machine learning (regression,
               classification, clustering, ensembles, model evaluation); deep learning
@@ -905,16 +905,16 @@ function Article() {
               <p className="mt-1.5 font-body text-sm leading-relaxed text-foreground">
                 A 7-month arc necessarily compresses the classical foundations. A learner
                 who wants an extended, unhurried runway through statistics, SQL, and
-                classical ML before touching a neural network will find LogicMojo\u2019s pace
-                brisker than Scaler\u2019s. Passive learners will feel it.
+                classical ML before touching a neural network will find LogicMojo’s pace
+                brisker than Scaler’s. Passive learners will feel it.
               </p>
             </div>
-            <h3 className="mt-8 font-heading text-2xl text-ink">Scaler\u2019s Curriculum</h3>
+            <h3 className="mt-8 font-heading text-2xl text-ink">Scaler’s Curriculum</h3>
             <p className="mt-4">
-              Scaler\u2019s ~12-month program is, to its credit, genuinely updated for 2026.
+              Scaler’s ~12-month program is, to its credit, genuinely updated for 2026.
               The program page explicitly frames it as &ldquo;built for how AI roles work
               now,&rdquo; covering RAG, multi-agent systems, and LLMOps. The longer arc buys
-              a more expansive foundations phase — Scaler\u2019s track famously begins from
+              a more expansive foundations phase — Scaler’s track famously begins from
               Excel and SQL before progressing through statistics, Python, ML, and DL to
               the advanced AI content. Learners are placed into beginner, intermediate, or
               advanced tracks via a 30-minute entrance MCQ.
@@ -925,7 +925,7 @@ function Article() {
               </p>
               <p className="mt-1.5 font-body text-sm leading-relaxed text-foreground">
                 For a true beginner — someone who has never written Python and is shaky on
-                statistics — Scaler\u2019s longer runway is a genuine pedagogical advantage.
+                statistics — Scaler’s longer runway is a genuine pedagogical advantage.
                 The levelled entry test and twelve months of enforced structure reduce the
                 risk of being overwhelmed early.
               </p>
@@ -959,14 +959,14 @@ function Article() {
               Data structures and algorithms sit in an odd position here, because both
               companies built their reputations on DSA — from opposite directions — and
               because the honest 2026 answer about how much DSA an AI aspirant needs is
-              &ldquo;less than either company\u2019s marketing historically implied, but
+              &ldquo;less than either company’s marketing historically implied, but
               more than zero.&rdquo;
             </p>
             <p>
-              <strong>Where the credibility comes from.</strong> Scaler\u2019s flagship
+              <strong>Where the credibility comes from.</strong> Scaler’s flagship
               Academy program made its name on exhaustive DSA and system design training —
               a long, rigorous problem-solving culture backed by an in-house judge
-              platform. LogicMojo\u2019s founding product is a DSA + System Design course
+              platform. LogicMojo’s founding product is a DSA + System Design course
               for working professionals, covering DSA in Java/Python/C++, microservices,
               design patterns, and both high-level and low-level design.{" "}
               <strong>Neither platform is bluffing on DSA.</strong>
@@ -981,14 +981,14 @@ function Article() {
             </p>
             <ul className="mt-2">
               <li>
-                <strong>LogicMojo\u2019s approach</strong> integrates interview-calibrated
+                <strong>LogicMojo’s approach</strong> integrates interview-calibrated
                 problem solving into the AI course and lets learners who need more take its
                 dedicated DSA + System Design track separately. You get the DSA an AI
                 interview actually tests without months on advanced graph algorithms an ML
                 loop will never ask.
               </li>
               <li>
-                <strong>Scaler\u2019s approach</strong> delivers problem-solving depth
+                <strong>Scaler’s approach</strong> delivers problem-solving depth
                 through its platform and culture, with the truly exhaustive DSA immersion
                 living in the Academy (software development) track. The in-house judges
                 and AI mock interviews are genuinely good tooling.
@@ -997,8 +997,8 @@ function Article() {
             <p>
               <strong>The verdict, stated carefully.</strong> If your goal is a pure SDE
               role with brutal DSA bars, this page is the wrong comparison — evaluate Scaler
-              Academy against LogicMojo\u2019s DSA + System Design course instead. If your
-              goal is an <strong>AI/ML role</strong>, LogicMojo\u2019s
+              Academy against LogicMojo’s DSA + System Design course instead. If your
+              goal is an <strong>AI/ML role</strong>, LogicMojo’s
               calibrated-DSA-inside-the-AI-course approach gives most learners what
               interviews actually test with far less time spent. Slight edge to Scaler on
               absolute depth and tooling; clear edge to LogicMojo on relevance-per-hour for
@@ -1040,12 +1040,12 @@ function Article() {
               </div>
             </div>
             <p className="mt-5">
-              Both models produce real portfolios; the difference is shape. LogicMojo\u2019s
+              Both models produce real portfolios; the difference is shape. LogicMojo’s
               set is <strong>denser in 2026-stack builds per month of study</strong> — a
               learner exits at month 7 with deployed RAG and agent projects on their GitHub.
-              Scaler\u2019s set is <strong>broader across the classical-to-modern
+              Scaler’s set is <strong>broader across the classical-to-modern
               spectrum</strong>. There is also a completion-risk asymmetry: a 12-month
-              project sequence has more opportunities for a busy professional\u2019s
+              project sequence has more opportunities for a busy professional’s
               portfolio to end half-built than a 7-month one — and a half-finished portfolio
               from an expensive program is worth less than a completed one from an
               affordable one. <strong>Score: LogicMojo 8.5, Scaler 8.0.</strong>
@@ -1093,9 +1093,9 @@ function Article() {
             </div>
             <p className="mt-5">
               <strong>Verdict: a genuine tie, chosen by temperament.</strong> If you want
-              short-distance access to the person who teaches you, LogicMojo\u2019s model
+              short-distance access to the person who teaches you, LogicMojo’s model
               fits. If you want a formally scheduled mentor cadence inside a big support
-              system, Scaler\u2019s fits. We score both <strong>8.5</strong> and advise
+              system, Scaler’s fits. We score both <strong>8.5</strong> and advise
               readers to weight this category by self-knowledge: which support structure
               have you actually used well in the past?
             </p>
@@ -1170,11 +1170,11 @@ function Article() {
               </li>
             </ul>
             <p className="mt-5">
-              Scaler\u2019s format is a well-run version of the immersion model, and its
+              Scaler’s format is a well-run version of the immersion model, and its
               recordings, TAs, and structure genuinely mitigate the load. But the load
               itself is a design choice, and it is the design choice least compatible with a
-              full-time job. LogicMojo\u2019s weekend-first, 7-month format was built for
-              exactly the learner Scaler\u2019s format strains.{" "}
+              full-time job. LogicMojo’s weekend-first, 7-month format was built for
+              exactly the learner Scaler’s format strains.{" "}
               <strong>Score: LogicMojo 9.0, Scaler 6.5 — the widest quality-adjusted gap on
               the page, and a structural one.</strong>
             </p>
@@ -1223,7 +1223,7 @@ function Article() {
             <ul className="mt-2">
               <li>
                 <strong>First, the ratio.</strong> At listed prices, Scaler costs roughly{" "}
-                <strong>four to five times</strong> LogicMojo\u2019s. That is the difference
+                <strong>four to five times</strong> LogicMojo’s. That is the difference
                 between a purchase most professionals can absorb from savings and one that
                 requires financing. For the gap to be worth it, Scaler must deliver 4–5×
                 the capability — or capability LogicMojo cannot deliver at all. It delivers
@@ -1251,7 +1251,7 @@ function Article() {
               <strong>what specific capability, network access, or credential does the
               ₹2L–₹3L difference buy — and do you, personally, need that specific thing?</strong>{" "}
               For most working professionals, the honest answer is that the difference buys
-              duration and brand they don\u2019t need at a price that funds an emergency
+              duration and brand they don’t need at a price that funds an emergency
               corpus they do. <strong>Value-for-money score: LogicMojo 9.5, Scaler 6.0.</strong>
             </p>
 
@@ -1271,11 +1271,11 @@ function Article() {
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-accent/40 bg-card p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-accent">
-                  LogicMojo\u2019s flexibility profile
+                  LogicMojo’s flexibility profile
                 </p>
                 <p className="mt-2 font-body text-sm leading-relaxed text-foreground">
                   Weekend-anchored live classes keep the core commitment out of the
-                  work-week\u2019s blast radius. Lifetime recordings mean a missed session
+                  work-week’s blast radius. Lifetime recordings mean a missed session
                   is a delayed session, not a lost one. The 7-month total means the finish
                   line is visible from the start — a completion factor research consistently
                   flags as significant. Demands real hours (~10–15/week); flexible, not
@@ -1284,7 +1284,7 @@ function Article() {
               </div>
               <div className="rounded-2xl border border-primary/30 bg-card p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-primary">
-                  Scaler\u2019s flexibility profile
+                  Scaler’s flexibility profile
                 </p>
                 <p className="mt-2 font-body text-sm leading-relaxed text-foreground">
                   Recordings and lifetime access exist here too, and the structured cadence
@@ -1297,14 +1297,14 @@ function Article() {
             </div>
             <p className="mt-5">
               <strong>Pause, deferral, and refund policies</strong> matter more for a
-              12-month commitment than a 7-month one, and both providers\u2019 current
+              12-month commitment than a 7-month one, and both providers’ current
               policies should be obtained <em>in writing</em> before payment — batch-deferral
               terms, refund windows, and pause options change over time at every Indian
               EdTech company, and verbal counsellor assurances are not policies.
             </p>
             <p>
-              <strong>Verdict:</strong> for the employed learner, LogicMojo\u2019s format
-              is the one engineered around your constraints; Scaler\u2019s is the one that
+              <strong>Verdict:</strong> for the employed learner, LogicMojo’s format
+              is the one engineered around your constraints; Scaler’s is the one that
               asks your constraints to move.
             </p>
 
@@ -1318,7 +1318,7 @@ function Article() {
                 half the time, at a fraction of the cost.
               </h2>
               <p className="mx-auto mt-4 max-w-xl font-body text-sm leading-relaxed text-muted-foreground">
-                LogicMojo\u2019s AI & ML Course covers the full 2026 stack — ML, deep
+                LogicMojo’s AI & ML Course covers the full 2026 stack — ML, deep
                 learning, GenAI, RAG, AI agents — live, weekend-friendly, with 1-on-1
                 mentorship and 15+ projects. Listed fee ₹65,000, GST inclusive, EMI
                 available.
