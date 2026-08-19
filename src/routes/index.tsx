@@ -279,6 +279,7 @@ const scores: Score[] = [
 ];
 
 const toc = [
+  { id: "author-eeat", n: "00", title: "Who Wrote This & Why Trust It" },
   { id: "why-this-comparison-exists", n: "1", title: "Why This Comparison Exists" },
   { id: "two-platforms-two-philosophies", n: "2", title: "Two Platforms, Two Philosophies" },
   { id: "the-full-comparison-table", n: "3", title: "The Full Comparison Table" },
