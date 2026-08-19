@@ -1272,6 +1272,26 @@ function Article() {
               and both platforms invest in it seriously. This is the closest category in
               our entire comparison.
             </p>
+            <ExperienceNote label="From the classroom">
+              <p>
+                Teaching live cohorts changed how we grade mentorship. The
+                metric that predicts whether someone finishes is not how many 1:1
+                sessions are promised in the brochure — it is how long a learner
+                stays stuck. A broken RAG pipeline resolved the same evening is a
+                minor setback; the same bug left for a week is usually where
+                people quietly stop attending.
+              </p>
+              <p>
+                So when we compare an instructor-proximate model against a
+                structured mentor network at scale, we are comparing two honest
+                answers to that problem, and we score them level. Whichever
+                program you shortlist, ask the concrete version of the question
+                on the call: <em>when I am stuck at 11pm on a Tuesday, who
+                answers, and by when?</em> The answer tells you more than any
+                syllabus PDF.
+              </p>
+            </ExperienceNote>
+
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <div className="surface-card border-accent/40 p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-accent">
