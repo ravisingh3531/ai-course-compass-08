@@ -488,11 +488,11 @@ function QuizModal({
           <p className="font-body text-xs font-semibold uppercase tracking-wide text-muted-foreground">
             Why this fits you
           </p>
-          <ul className="mt-2 space-y-2">
+          <ul className="mt-2 list-none space-y-2 pl-0">
             {rec.reasons.map((r) => (
               <li
                 key={r}
-                className="flex gap-2 font-body text-sm leading-relaxed text-foreground"
+                className="flex list-none gap-2 font-body text-sm leading-relaxed text-foreground"
               >
                 <span className="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 {r}
@@ -959,7 +959,7 @@ export function ResearchRecommendation() {
         </div>
 
         <SubHeading>A five-step verification routine</SubHeading>
-        <ol className="mt-4 space-y-3">
+        <ol className="mt-4 list-none space-y-3 pl-0">
           {[
             "Ask for the definition: what does 'placed' mean here — any offer, a relevant AI role, within how many months, and who is excluded from the count?",
             "Ask for the denominator: how many learners started the cohort the figure describes, and how many were counted in it?",
@@ -967,7 +967,7 @@ export function ResearchRecommendation() {
             "Ask for the job-assistance scope in writing, including how long support continues after the course ends.",
             "Read the refund, deferral and pause clauses before payment, and keep a dated copy of the fee page you were shown.",
           ].map((s, i) => (
-            <li key={s} className="flex gap-3">
+            <li key={s} className="flex list-none gap-3">
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 font-body text-xs font-bold text-accent">
                 {i + 1}
               </span>
