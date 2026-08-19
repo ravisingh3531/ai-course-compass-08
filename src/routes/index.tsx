@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ExtendedSections, faqList } from "@/components/ExtendedSections";
 import { ResearchRecommendation } from "@/components/ResearchRecommendation";
+import { LINKS } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -493,7 +494,7 @@ function Article() {
             ))}
           </nav>
           <a
-            href="https://www.logicmojo.com/ai-ml-course"
+            href={LINKS.logicmojoCourse}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
@@ -653,7 +654,7 @@ function Article() {
                 ))}
               </ol>
               <a
-                href="https://www.logicmojo.com/ai-ml-course"
+                href={LINKS.logicmojoCourse}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2.5 font-body text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -1441,7 +1442,7 @@ function Article() {
               </p>
               <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="https://www.logicmojo.com/ai-ml-course"
+                  href={LINKS.logicmojoCourse}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-full bg-primary px-7 py-3 font-body text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"

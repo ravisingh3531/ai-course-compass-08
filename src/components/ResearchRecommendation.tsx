@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { LINKS } from "@/lib/links";
 
 /* ------------------------------------------------------------------ */
 /*  Shared bits                                                        */
@@ -537,7 +538,7 @@ function QuizModal({
             Neither provider publishes independently audited placement statistics, and nothing here is a placement or salary guarantee. Ask for the current job-assistance scope in writing before you pay.
           </p>
           <a
-            href="https://logicmojo.com/success-story"
+            href={LINKS.logicmojoSuccess}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-3 inline-block font-body text-sm font-semibold text-primary underline underline-offset-4"
@@ -548,7 +549,7 @@ function QuizModal({
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="https://www.logicmojo.com/ai-ml-course"
+            href={LINKS.logicmojoCourse}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
@@ -674,7 +675,7 @@ export function ResearchRecommendation() {
             Everything below is built from documents you can open yourself: each
             provider's current course pages, LogicMojo's named{" "}
             <a
-              href="https://logicmojo.com/success-story"
+              href={LINKS.logicmojoSuccess}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-primary underline underline-offset-4"
@@ -753,7 +754,7 @@ export function ResearchRecommendation() {
           turn any provider's success page into evidence you trust — applied to
           LogicMojo's{" "}
           <a
-            href="https://logicmojo.com/success-story"
+            href={LINKS.logicmojoSuccess}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-primary underline underline-offset-4"
@@ -1043,7 +1044,7 @@ export function ResearchRecommendation() {
             on published fees, published duration, published syllabus scope and named
             outcomes on{" "}
             <a
-              href="https://logicmojo.com/success-story"
+              href={LINKS.logicmojoSuccess}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-primary underline underline-offset-4"
