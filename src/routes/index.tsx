@@ -385,11 +385,53 @@ function useActiveSection(ids: string[]) {
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
+function useScrollReveal() {
+  useEffect(() => {
+    const nodes = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-reveal] > *"),
+    );
+    nodes.forEach((n) => n.classList.add("reveal"));
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            (e.target as HTMLElement).style.transitionDelay = "0ms";
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+    );
+    nodes.forEach((n) => io.observe(n));
+    return () => io.disconnect();
+  }, []);
+}
+
+function useScrollProgress() {
+  const [p, setP] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      setP(max > 0 ? (h.scrollTop / max) * 100 : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return p;
+}
+
 function Article() {
   const active = useActiveSection(toc.map((t) => t.id));
+  const progress = useScrollProgress();
+  useScrollReveal();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+
       {/* ---------------- Sticky header ---------------- */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
