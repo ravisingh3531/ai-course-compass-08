@@ -924,7 +924,7 @@ export function ExtendedSections() {
       </div>
       <div className="mt-6 space-y-3">
         {faqs.map(([q, a], i) => (
-          <Faq key={q} q={q} a={a} i={i} />
+          <Faq key={q} q={q} a={a} i={i} sources={faqSources[i]} />
         ))}
       </div>
 
