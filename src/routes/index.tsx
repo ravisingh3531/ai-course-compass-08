@@ -462,7 +462,16 @@ function useScrollProgress() {
 function Article() {
   const active = useActiveSection(toc.map((t) => t.id));
   const progress = useScrollProgress();
+  const [menuOpen, setMenuOpen] = useState(false);
   useScrollReveal();
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -532,14 +541,30 @@ function Article() {
               </a>
             ))}
           </nav>
-          <a
-            href={LINKS.logicmojoCourse}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
-          >
-            Explore the Course
-          </a>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open contents"
+              aria-expanded={menuOpen}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 font-body text-sm text-ink transition-colors hover:border-accent hover:text-accent lg:hidden"
+            >
+              <span className="flex flex-col gap-[3px]" aria-hidden>
+                <span className="block h-px w-4 bg-current" />
+                <span className="block h-px w-4 bg-current" />
+                <span className="block h-px w-4 bg-current" />
+              </span>
+              Contents
+            </button>
+            <a
+              href={LINKS.logicmojoCourse}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
+            >
+              Explore the Course
+            </a>
+          </div>
         </div>
         <div
           className="h-0.5 origin-left bg-[image:var(--gradient-brand)] transition-[width] duration-150"
@@ -547,6 +572,61 @@ function Article() {
           aria-hidden
         />
       </header>
+
+      {/* ---------------- Mobile contents drawer ---------------- */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-[60] lg:hidden">
+          <button
+            type="button"
+            aria-label="Close contents"
+            onClick={() => setMenuOpen(false)}
+            className="absolute inset-0 h-full w-full bg-ink/40 backdrop-blur-sm"
+          />
+          <div className="quiz-modal-in absolute right-0 top-0 flex h-full w-[86%] max-w-sm flex-col border-l border-border bg-background shadow-2xl">
+            <div className="flex items-center justify-between border-b border-border px-5 py-4">
+              <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                Contents
+              </p>
+              <button
+                type="button"
+                onClick={() => setMenuOpen(false)}
+                className="rounded-full border border-border px-3 py-1 font-body text-sm text-muted-foreground transition-colors hover:text-ink"
+              >
+                Close
+              </button>
+            </div>
+            <ol className="flex-1 space-y-1 overflow-y-auto px-5 py-4">
+              {toc.map((t) => (
+                <li key={t.id}>
+                  <a
+                    href={`#${t.id}`}
+                    onClick={() => setMenuOpen(false)}
+                    className={`flex items-baseline gap-2 rounded-lg px-2 py-2 font-body text-sm transition-colors ${
+                      active === t.id
+                        ? "bg-accent/10 font-semibold text-accent"
+                        : "text-muted-foreground hover:bg-muted hover:text-ink"
+                    }`}
+                  >
+                    <span className="font-mono text-xs text-accent/70">{t.n}</span>
+                    <span>{t.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+            <div className="border-t border-border p-4">
+              <a
+                href={LINKS.logicmojoCourse}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2.5 font-body text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Explore LogicMojo AI
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
 
       {/* ---------------- Hero ---------------- */}
       <section
