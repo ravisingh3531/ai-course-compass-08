@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ExtendedSections, faqList } from "@/components/ExtendedSections";
 import { ResearchRecommendation } from "@/components/ResearchRecommendation";
+import { LINKS } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -493,7 +494,7 @@ function Article() {
             ))}
           </nav>
           <a
-            href="https://www.logicmojo.com/ai-ml-course"
+            href={LINKS.logicmojoCourse}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
@@ -597,6 +598,14 @@ function Article() {
                   fee — with a weekend-friendly schedule. Weighted score:{" "}
                   <strong className="font-semibold text-accent">8.7 / 10</strong>.
                 </p>
+                <a
+                  href={LINKS.logicmojoCourse}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex font-body text-sm font-semibold text-accent underline underline-offset-4 hover:text-primary"
+                >
+                  View the official LogicMojo AI &amp; ML course page ↗
+                </a>
               </div>
               <div className="surface-card border-primary/30 p-5">
                 <p className="font-body text-sm text-muted-foreground">
@@ -612,6 +621,14 @@ function Article() {
                   Weighted score:{" "}
                   <strong className="font-semibold text-primary">7.5 / 10</strong>.
                 </p>
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="mt-3 inline-flex font-body text-sm font-semibold text-primary underline underline-offset-4 hover:text-accent"
+                >
+                  View the official Scaler DS/AI &amp; ML program page ↗
+                </a>
               </div>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
                 The deciding variables: your budget, your weekly time, and whether you
@@ -653,7 +670,7 @@ function Article() {
                 ))}
               </ol>
               <a
-                href="https://www.logicmojo.com/ai-ml-course"
+                href={LINKS.logicmojoCourse}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2.5 font-body text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -738,14 +755,31 @@ function Article() {
               could not attend a weekday 11 a.m. lecture.
             </p>
             <p>
-              LogicMojo’s <strong>AI & ML Course</strong> applies that model to the
+              LogicMojo’s{" "}
+              <a
+                href={LINKS.logicmojoCourse}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-accent underline underline-offset-4 hover:text-primary"
+              >
+                AI &amp; ML Course
+              </a>{" "}
+              applies that model to the
               2026 AI stack: a roughly <strong>7-month, live, cohort-based program</strong>{" "}
               covering Python, machine learning, deep learning, and — critically for 2026 —
               generative AI, LLMs, RAG systems, and agentic AI, delivered through live
               weekend-friendly classes with recorded access, 1-on-1 mentorship, 15+
               hands-on projects, and placement assistance. The publicly listed fee is{" "}
-              <strong>₹65,000 (GST inclusive)</strong> with EMI options — LogicMojo’s own
-              fee-comparison page cites monthly EMIs around ₹5,160.
+              <strong>₹65,000 (GST inclusive)</strong> with EMI options — LogicMojo’s own{" "}
+              <a
+                href={LINKS.logicmojoFees}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-accent underline underline-offset-4 hover:text-primary"
+              >
+                fee-comparison page
+              </a>{" "}
+              cites monthly EMIs around ₹5,160.
             </p>
             <p>
               The trade-off is equally clear, and we will keep returning to it: LogicMojo
@@ -759,8 +793,25 @@ function Article() {
             </h3>
             <p className="mt-4">
               Scaler (by InterviewBit) is one of India’s largest tech-upskilling
-              companies, best known for Scaler Academy and, relevant here, its{" "}
-              <strong>Data Science / AI & Machine Learning program</strong>. Scaler’s
+              companies, best known for{" "}
+              <a
+                href={LINKS.scalerAcademy}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="font-medium text-primary underline underline-offset-4 hover:text-accent"
+              >
+                Scaler Academy
+              </a>{" "}
+              and, relevant here, its{" "}
+              <a
+                href={LINKS.scalerCourse}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="font-semibold text-primary underline underline-offset-4 hover:text-accent"
+              >
+                Data Science / AI &amp; Machine Learning program
+              </a>
+              . Scaler’s
               2026 AI/ML offering is a serious, current product: a roughly{" "}
               <strong>12-month</strong> curriculum updated for the modern stack — RAG,
               multi-agent systems, and LLMOps — delivered through live classes,
@@ -1441,7 +1492,7 @@ function Article() {
               </p>
               <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="https://www.logicmojo.com/ai-ml-course"
+                  href={LINKS.logicmojoCourse}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-full bg-primary px-7 py-3 font-body text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
@@ -1453,6 +1504,14 @@ function Article() {
                   className="inline-flex items-center rounded-full border border-border px-7 py-3 font-body text-sm font-semibold text-ink transition-colors hover:bg-secondary"
                 >
                   Re-read the comparison
+                </a>
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="inline-flex items-center rounded-full border border-border px-7 py-3 font-body text-sm font-semibold text-ink transition-colors hover:bg-secondary"
+                >
+                  Check Scaler’s official page
                 </a>
               </div>
               <p className="mt-6 font-body text-xs text-muted-foreground">

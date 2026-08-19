@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LINKS } from "@/lib/links";
 
 /* ------------------------------------------------------------------ */
 /*  Shared bits                                                        */
@@ -339,11 +340,49 @@ const faqs: [string, string][] = [
   ],
 ];
 
+type SourceLink = { label: string; href: string };
+
+const LM = (label: string, href: string): SourceLink => ({ label, href });
+const SC_COURSE = LM("Scaler AI & ML program", LINKS.scalerCourse);
+const SC_ACADEMY = LM("Scaler Academy", LINKS.scalerAcademy);
+
+/** Official pages backing each FAQ answer, indexed by FAQ position. */
+const faqSources: SourceLink[][] = [
+  [LM("LogicMojo for working professionals", LINKS.logicmojoProfessionals), SC_COURSE],
+  [LM("LogicMojo fees", LINKS.logicmojoFees), SC_COURSE],
+  [LM("LogicMojo GenAI curriculum", LINKS.logicmojoGenAI), SC_COURSE],
+  [SC_COURSE, SC_ACADEMY],
+  [LM("LogicMojo for beginners", LINKS.logicmojoBeginners), LM("LogicMojo AI & ML course", LINKS.logicmojoCourse)],
+  [LM("LogicMojo DSA + System Design", LINKS.logicmojoDSA), SC_ACADEMY],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo success stories", LINKS.logicmojoSuccess), SC_COURSE],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo for working professionals", LINKS.logicmojoProfessionals), SC_COURSE],
+  [LM("LogicMojo fees & EMI", LINKS.logicmojoFees), SC_COURSE],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo success stories", LINKS.logicmojoSuccess), SC_ACADEMY],
+  [LM("LogicMojo GenAI curriculum", LINKS.logicmojoGenAI), SC_COURSE],
+  [LM("LogicMojo reviews", LINKS.logicmojoReviews), LM("LogicMojo success stories", LINKS.logicmojoSuccess)],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo GenAI & AI projects", LINKS.logicmojoProjects), SC_COURSE],
+];
+
 /* ------------------------------------------------------------------ */
 /*  FAQ accordion                                                      */
 /* ------------------------------------------------------------------ */
 
-function Faq({ q, a, i }: { q: string; a: string; i: number }) {
+function Faq({
+  q,
+  a,
+  i,
+  sources = [],
+}: {
+  q: string;
+  a: string;
+  i: number;
+  sources?: SourceLink[];
+}) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -375,9 +414,27 @@ function Faq({ q, a, i }: { q: string; a: string; i: number }) {
         style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="px-4 pb-4 pl-10 font-body text-sm leading-relaxed text-muted-foreground">
+          <p className="px-4 pl-10 font-body text-sm leading-relaxed text-muted-foreground">
             {a}
           </p>
+          {sources.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2 px-4 pb-4 pl-10 pt-3">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                Official pages
+              </span>
+              {sources.map((s) => (
+                <a
+                  key={s.href + s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="rounded-full border border-accent/30 bg-card px-3 py-1 font-body text-xs font-medium text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                >
+                  {s.label} ↗
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -867,7 +924,7 @@ export function ExtendedSections() {
       </div>
       <div className="mt-6 space-y-3">
         {faqs.map(([q, a], i) => (
-          <Faq key={q} q={q} a={a} i={i} />
+          <Faq key={q} q={q} a={a} i={i} sources={faqSources[i] ?? []} />
         ))}
       </div>
 
@@ -978,7 +1035,7 @@ export function ExtendedSections() {
           ))}
         </div>
         <a
-          href="https://www.logicmojo.com/ai-ml-course"
+          href={LINKS.logicmojoCourse}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-flex items-center rounded-full bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
