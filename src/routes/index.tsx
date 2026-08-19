@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ExtendedSections, faqList } from "@/components/ExtendedSections";
 import { ResearchRecommendation } from "@/components/ResearchRecommendation";
+import AlumniReviews from "@/components/AlumniReviews";
 import { LINKS } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
@@ -299,6 +300,7 @@ const toc = [
   { id: "placement-truth", n: "25", title: "Assistance vs Guarantee" },
   { id: "course-quiz", n: "26", title: "Find Your Fit — Quiz" },
   { id: "how-i-researched", n: "27", title: "How I Researched This" },
+  { id: "alumni-reviews", n: "28", title: "Real Alumni Reviews" },
 ];
 
 const navLinks = [
@@ -309,6 +311,7 @@ const navLinks = [
   { id: "placements", label: "Placements" },
   { id: "research-backed-recommendation", label: "Recommendation" },
   { id: "course-quiz", label: "Quiz" },
+  { id: "alumni-reviews", label: "Alumni reviews" },
   { id: "verdict", label: "Verdict" },
   { id: "faqs", label: "FAQs" },
 ];
@@ -1474,6 +1477,8 @@ function Article() {
             <ExtendedSections />
 
             <ResearchRecommendation />
+
+            <AlumniReviews />
 
             {/* CTA */}
             <div className="mt-16 rounded-3xl border border-accent/40 bg-gradient-to-br from-paper to-card p-8 text-center sm:p-12">
