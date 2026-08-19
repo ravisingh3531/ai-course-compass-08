@@ -311,6 +311,7 @@ const toc = [
 ];
 
 const navLinks = [
+  { id: "author-eeat", label: "Who wrote this" },
   { id: "the-full-comparison-table", label: "Comparison" },
   { id: "scoring-system", label: "Scoring" },
   { id: "curriculum", label: "Curriculum" },
