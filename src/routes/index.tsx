@@ -521,7 +521,7 @@ function Article() {
               · Editorial
             </span>
           </a>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-4 lg:flex xl:gap-5">
             {navLinks.map((l) => (
               <a
                 key={l.id}
