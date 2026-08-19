@@ -755,14 +755,31 @@ function Article() {
               could not attend a weekday 11 a.m. lecture.
             </p>
             <p>
-              LogicMojo’s <strong>AI & ML Course</strong> applies that model to the
+              LogicMojo’s{" "}
+              <a
+                href={LINKS.logicmojoCourse}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-accent underline underline-offset-4 hover:text-primary"
+              >
+                AI &amp; ML Course
+              </a>{" "}
+              applies that model to the
               2026 AI stack: a roughly <strong>7-month, live, cohort-based program</strong>{" "}
               covering Python, machine learning, deep learning, and — critically for 2026 —
               generative AI, LLMs, RAG systems, and agentic AI, delivered through live
               weekend-friendly classes with recorded access, 1-on-1 mentorship, 15+
               hands-on projects, and placement assistance. The publicly listed fee is{" "}
-              <strong>₹65,000 (GST inclusive)</strong> with EMI options — LogicMojo’s own
-              fee-comparison page cites monthly EMIs around ₹5,160.
+              <strong>₹65,000 (GST inclusive)</strong> with EMI options — LogicMojo’s own{" "}
+              <a
+                href={LINKS.logicmojoFees}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-accent underline underline-offset-4 hover:text-primary"
+              >
+                fee-comparison page
+              </a>{" "}
+              cites monthly EMIs around ₹5,160.
             </p>
             <p>
               The trade-off is equally clear, and we will keep returning to it: LogicMojo
