@@ -1088,6 +1088,40 @@ function Article() {
               the same: <strong>how much of the course is the stack employers are hiring
               for right now — LLMs, RAG, agents, deployment — and how much is runway?</strong>
             </p>
+            <ExperienceNote label="How we grade a syllabus">
+              <p>
+                We do not grade syllabi by counting topics. We grade them against
+                what our mentors are asked in mock interviews and what our
+                learners actually have to build before a recruiter takes them
+                seriously in 2026: a retrieval pipeline with a real vector store
+                and an evaluation story, a tool-using agent that fails
+                gracefully, one fine-tune where the learner can explain why LoRA
+                over full fine-tuning, and a deployment with monitoring and a
+                cost ceiling.
+              </p>
+              <p>
+                Any course that lists LLMs but never makes you measure retrieval
+                quality or defend a chunking choice teaches vocabulary, not
+                capability. Read both syllabi with that filter — the{" "}
+                <a
+                  href={LINKS.logicmojoGenAI}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LogicMojo GenAI outline
+                </a>{" "}
+                and the{" "}
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Scaler program page
+                </a>{" "}
+                are both public.
+              </p>
+            </ExperienceNote>
+
             <h3 className="mt-8 font-heading text-2xl text-ink">LogicMojo’s Curriculum</h3>
             <p className="mt-4">
               LogicMojo’s ~7-month program runs as a single continuous arc from
