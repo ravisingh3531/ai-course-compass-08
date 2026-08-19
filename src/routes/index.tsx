@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { ExtendedSections, faqList } from "@/components/ExtendedSections";
 import { ResearchRecommendation } from "@/components/ResearchRecommendation";
 import AlumniReviews from "@/components/AlumniReviews";
+import {
+  AuthorByline,
+  AuthorEEAT,
+  ExperienceNote,
+} from "@/components/AuthorEEAT";
+import { AUTHOR } from "@/lib/author";
 import { LINKS } from "@/lib/links";
 
 export const Route = createFileRoute("/")({
@@ -273,6 +279,7 @@ const scores: Score[] = [
 ];
 
 const toc = [
+  { id: "author-eeat", n: "00", title: "Who Wrote This & Why Trust It" },
   { id: "why-this-comparison-exists", n: "1", title: "Why This Comparison Exists" },
   { id: "two-platforms-two-philosophies", n: "2", title: "Two Platforms, Two Philosophies" },
   { id: "the-full-comparison-table", n: "3", title: "The Full Comparison Table" },
@@ -304,17 +311,18 @@ const toc = [
 ];
 
 const navLinks = [
+  { id: "author-eeat", label: "Author" },
   { id: "the-full-comparison-table", label: "Comparison" },
   { id: "scoring-system", label: "Scoring" },
   { id: "curriculum", label: "Curriculum" },
   { id: "fees", label: "Fees" },
   { id: "placements", label: "Placements" },
-  { id: "research-backed-recommendation", label: "Recommendation" },
+  { id: "research-backed-recommendation", label: "Verdict picks" },
   { id: "course-quiz", label: "Quiz" },
-  { id: "alumni-reviews", label: "Alumni reviews" },
-  { id: "verdict", label: "Verdict" },
+  { id: "alumni-reviews", label: "Alumni" },
   { id: "faqs", label: "FAQs" },
 ];
+
 
 
 /* ------------------------------------------------------------------ */
@@ -472,6 +480,34 @@ function Article() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline:
+              "LogicMojo vs Scaler: Which AI Course Is Better in 2026?",
+            description:
+              "A first-hand, evidence-labelled comparison of the LogicMojo and Scaler AI & ML programs, written by mentors who teach live AI cohorts.",
+            dateModified: "2026-08-01",
+            author: {
+              "@type": "Organization",
+              name: AUTHOR.name,
+              url: AUTHOR.profileUrl,
+              description: AUTHOR.role,
+            },
+            reviewedBy: { "@type": "Organization", name: AUTHOR.name },
+            publisher: {
+              "@type": "Organization",
+              name: "LogicMojo",
+              url: "https://logicmojo.com/",
+            },
+            citation: [LINKS.logicmojoCourse, LINKS.scalerCourse],
+          }),
+        }}
+      />
+
 
       {/* ---------------- Sticky header ---------------- */}
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
@@ -485,12 +521,12 @@ function Article() {
               · Editorial
             </span>
           </a>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-4 lg:flex xl:gap-5">
             {navLinks.map((l) => (
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className="relative font-body text-sm text-muted-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-ink hover:after:w-full"
+                className="relative whitespace-nowrap font-body text-sm text-muted-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:text-ink hover:after:w-full"
               >
                 {l.label}
               </a>
@@ -542,12 +578,15 @@ function Article() {
             <br className="hidden sm:block" /> Which AI Course Is Better in 2026?
           </h1>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-sm text-muted-foreground">
-            <span className="font-medium text-ink">Last updated: August 2026</span>
+            <span className="font-medium text-ink">
+              Last updated: {AUTHOR.lastUpdated}
+            </span>
             <span aria-hidden>·</span>
-            <span>~35 min read</span>
+            <span>{AUTHOR.readTime}</span>
             <span aria-hidden>·</span>
-            <span>Published by LogicMojo</span>
+            <span>Written by mentors who teach these cohorts</span>
           </div>
+          <AuthorByline />
           <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-3">
             {[
               { k: "₹65,000", v: "LogicMojo fee" },
@@ -572,6 +611,9 @@ function Article() {
         </div>
       </section>
 
+
+      {/* ---------------- 00 · E-E-A-T author block ---------------- */}
+      <AuthorEEAT />
 
       {/* ---------------- 30-second answer ---------------- */}
       <section className="border-b border-border/70 bg-paper">
@@ -697,6 +739,23 @@ function Article() {
               <strong>₹65,000-to-₹3.7-lakh decision</strong> that will consume six to
               twelve months of your life.
             </p>
+            <ExperienceNote label="Why we felt qualified to write it">
+              <p>
+                We write this as people who run the cohorts, not as reviewers
+                skimming landing pages. Between us we teach live AI &amp; ML
+                sessions weekly, sit in mock interviews, and rewrite the same
+                three resume mistakes over and over. That is real experience, and
+                it is also a real bias — we sell one of the two programs here.
+              </p>
+              <p>
+                So the deal we are offering you is this: first-hand judgement
+                where we have it, public sources where we do not, a plainly
+                stated conflict of interest, and an explicit section telling you
+                when to pick Scaler over us. If that balance ever slips, the
+                comparison is worthless — including to us.
+              </p>
+            </ExperienceNote>
+
             <p>
               This page attempts something harder: a comparison published by one of the
               two providers that is still worth reading. The only way that works is
@@ -1046,6 +1105,40 @@ function Article() {
               the same: <strong>how much of the course is the stack employers are hiring
               for right now — LLMs, RAG, agents, deployment — and how much is runway?</strong>
             </p>
+            <ExperienceNote label="How we grade a syllabus">
+              <p>
+                We do not grade syllabi by counting topics. We grade them against
+                what our mentors are asked in mock interviews and what our
+                learners actually have to build before a recruiter takes them
+                seriously in 2026: a retrieval pipeline with a real vector store
+                and an evaluation story, a tool-using agent that fails
+                gracefully, one fine-tune where the learner can explain why LoRA
+                over full fine-tuning, and a deployment with monitoring and a
+                cost ceiling.
+              </p>
+              <p>
+                Any course that lists LLMs but never makes you measure retrieval
+                quality or defend a chunking choice teaches vocabulary, not
+                capability. Read both syllabi with that filter — the{" "}
+                <a
+                  href={LINKS.logicmojoGenAI}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LogicMojo GenAI outline
+                </a>{" "}
+                and the{" "}
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Scaler program page
+                </a>{" "}
+                are both public.
+              </p>
+            </ExperienceNote>
+
             <h3 className="mt-8 font-heading text-2xl text-ink">LogicMojo’s Curriculum</h3>
             <p className="mt-4">
               LogicMojo’s ~7-month program runs as a single continuous arc from
@@ -1230,6 +1323,26 @@ function Article() {
               and both platforms invest in it seriously. This is the closest category in
               our entire comparison.
             </p>
+            <ExperienceNote label="From the classroom">
+              <p>
+                Teaching live cohorts changed how we grade mentorship. The
+                metric that predicts whether someone finishes is not how many 1:1
+                sessions are promised in the brochure — it is how long a learner
+                stays stuck. A broken RAG pipeline resolved the same evening is a
+                minor setback; the same bug left for a week is usually where
+                people quietly stop attending.
+              </p>
+              <p>
+                So when we compare an instructor-proximate model against a
+                structured mentor network at scale, we are comparing two honest
+                answers to that problem, and we score them level. Whichever
+                program you shortlist, ask the concrete version of the question
+                on the call: <em>when I am stuck at 11pm on a Tuesday, who
+                answers, and by when?</em> The answer tells you more than any
+                syllabus PDF.
+              </p>
+            </ExperienceNote>
+
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <div className="surface-card border-accent/40 p-5">
                 <p className="font-body text-xs font-semibold uppercase tracking-wide text-accent">
@@ -1420,6 +1533,40 @@ function Article() {
               duration and brand they don’t need at a price that funds an emergency
               corpus they do. <strong>Value-for-money score: LogicMojo 9.5, Scaler 6.0.</strong>
             </p>
+            <ExperienceNote label="What we hear on counselling calls">
+              <p>
+                The fee conversation we have most often is not &ldquo;which is
+                cheaper.&rdquo; It is a learner working out, out loud, what happens
+                to a two-year EMI if their team is restructured in month six. We
+                have taken that call enough times to weight financial risk
+                heavily here — and to give the same advice every time, including
+                to people who then chose Scaler: borrow only what you could still
+                service on a lower salary, and get the total repayable amount in
+                writing from whichever provider you pick.
+              </p>
+              <p>
+                Treat the numbers above as a starting point, not gospel. Both
+                providers change pricing; confirm on the{" "}
+                <a
+                  href={LINKS.logicmojoFees}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LogicMojo fees page
+                </a>{" "}
+                and the{" "}
+                <a
+                  href={LINKS.scalerCourse}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Scaler program page
+                </a>{" "}
+                before you pay anything.
+              </p>
+            </ExperienceNote>
+
+
 
             {/* 11 — flexibility */}
             <div className="mt-16">
