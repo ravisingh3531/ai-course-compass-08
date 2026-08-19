@@ -372,7 +372,17 @@ const faqSources: SourceLink[][] = [
 /*  FAQ accordion                                                      */
 /* ------------------------------------------------------------------ */
 
-function Faq({ q, a, i }: { q: string; a: string; i: number }) {
+function Faq({
+  q,
+  a,
+  i,
+  sources = [],
+}: {
+  q: string;
+  a: string;
+  i: number;
+  sources?: SourceLink[];
+}) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -404,9 +414,27 @@ function Faq({ q, a, i }: { q: string; a: string; i: number }) {
         style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="px-4 pb-4 pl-10 font-body text-sm leading-relaxed text-muted-foreground">
+          <p className="px-4 pl-10 font-body text-sm leading-relaxed text-muted-foreground">
             {a}
           </p>
+          {sources.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2 px-4 pb-4 pl-10 pt-3">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                Official pages
+              </span>
+              {sources.map((s) => (
+                <a
+                  key={s.href + s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="rounded-full border border-accent/30 bg-card px-3 py-1 font-body text-xs font-medium text-primary transition-colors hover:border-accent hover:bg-accent/10"
+                >
+                  {s.label} ↗
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
