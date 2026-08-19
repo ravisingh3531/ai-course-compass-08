@@ -726,7 +726,7 @@ function Article() {
           </aside>
 
           {/* Main content */}
-          <article data-reveal className="prose-article max-w-2xl">
+          <article data-reveal className="prose-article w-full min-w-0 max-w-2xl">
             {/* 1 */}
             <SectionHeading n="01" id="why-this-comparison-exists">
               Why This Comparison Exists
