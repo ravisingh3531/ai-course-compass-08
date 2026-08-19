@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { LINKS } from "@/lib/links";
+import { ScrollableTable } from "@/components/ScrollableTable";
 
 /* ------------------------------------------------------------------ */
 /*  Shared bits                                                        */

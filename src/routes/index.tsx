@@ -10,6 +10,7 @@ import {
 } from "@/components/AuthorEEAT";
 import { AUTHOR } from "@/lib/author";
 import { LINKS } from "@/lib/links";
+import { ScrollableTable } from "@/components/ScrollableTable";
 
 export const Route = createFileRoute("/")({
   head: () => ({
