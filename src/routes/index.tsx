@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ExtendedSections, faqList } from "@/components/ExtendedSections";
+import { ResearchRecommendation } from "@/components/ResearchRecommendation";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -1420,6 +1421,8 @@ function Article() {
             </p>
 
             <ExtendedSections />
+
+            <ResearchRecommendation />
 
             {/* CTA */}
             <div className="mt-16 rounded-3xl border border-accent/40 bg-gradient-to-br from-paper to-card p-8 text-center sm:p-12">
