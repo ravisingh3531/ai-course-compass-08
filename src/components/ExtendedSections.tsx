@@ -340,6 +340,34 @@ const faqs: [string, string][] = [
   ],
 ];
 
+type SourceLink = { label: string; href: string };
+
+const LM = (label: string, href: string): SourceLink => ({ label, href });
+const SC_COURSE = LM("Scaler AI & ML program", LINKS.scalerCourse);
+const SC_ACADEMY = LM("Scaler Academy", LINKS.scalerAcademy);
+
+/** Official pages backing each FAQ answer, indexed by FAQ position. */
+const faqSources: SourceLink[][] = [
+  [LM("LogicMojo for working professionals", LINKS.logicmojoProfessionals), SC_COURSE],
+  [LM("LogicMojo fees", LINKS.logicmojoFees), SC_COURSE],
+  [LM("LogicMojo GenAI curriculum", LINKS.logicmojoGenAI), SC_COURSE],
+  [SC_COURSE, SC_ACADEMY],
+  [LM("LogicMojo for beginners", LINKS.logicmojoBeginners), LM("LogicMojo AI & ML course", LINKS.logicmojoCourse)],
+  [LM("LogicMojo DSA + System Design", LINKS.logicmojoDSA), SC_ACADEMY],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo success stories", LINKS.logicmojoSuccess), SC_COURSE],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo for working professionals", LINKS.logicmojoProfessionals), SC_COURSE],
+  [LM("LogicMojo fees & EMI", LINKS.logicmojoFees), SC_COURSE],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo success stories", LINKS.logicmojoSuccess), SC_ACADEMY],
+  [LM("LogicMojo GenAI curriculum", LINKS.logicmojoGenAI), SC_COURSE],
+  [LM("LogicMojo reviews", LINKS.logicmojoReviews), LM("LogicMojo success stories", LINKS.logicmojoSuccess)],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo AI & ML course", LINKS.logicmojoCourse), SC_COURSE],
+  [LM("LogicMojo GenAI & AI projects", LINKS.logicmojoProjects), SC_COURSE],
+];
+
 /* ------------------------------------------------------------------ */
 /*  FAQ accordion                                                      */
 /* ------------------------------------------------------------------ */
