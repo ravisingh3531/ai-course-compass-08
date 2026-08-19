@@ -578,12 +578,15 @@ function Article() {
             <br className="hidden sm:block" /> Which AI Course Is Better in 2026?
           </h1>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-sm text-muted-foreground">
-            <span className="font-medium text-ink">Last updated: August 2026</span>
+            <span className="font-medium text-ink">
+              Last updated: {AUTHOR.lastUpdated}
+            </span>
             <span aria-hidden>·</span>
-            <span>~35 min read</span>
+            <span>{AUTHOR.readTime}</span>
             <span aria-hidden>·</span>
-            <span>Published by LogicMojo</span>
+            <span>Written by mentors who teach these cohorts</span>
           </div>
+          <AuthorByline />
           <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-3">
             {[
               { k: "₹65,000", v: "LogicMojo fee" },
