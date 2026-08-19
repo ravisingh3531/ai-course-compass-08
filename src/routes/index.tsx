@@ -337,7 +337,7 @@ function Pill({
   tone: "lm" | "sc" | "tie" | "dep";
 }) {
   const map = {
-    lm: "border-accent/50 bg-accent/10 text-accent-foreground",
+    lm: "border-accent/50 bg-accent/10 text-accent font-semibold",
     sc: "border-primary/40 bg-primary/10 text-primary",
     tie: "border-border bg-secondary text-muted-foreground",
     dep: "border-border bg-transparent text-muted-foreground",
